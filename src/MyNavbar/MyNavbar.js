@@ -54,7 +54,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/"><img src={logo}/></NavbarBrand>
+          <NavbarBrand href="/"><img src="https://github.com/jeressia/harmonie-app/blob/master/src/MyNavbar/harmonielogo.png?raw=true" className="logo" alt="logo"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
