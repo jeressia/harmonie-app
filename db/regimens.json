@@ -1,0 +1,38 @@
+{
+  "regimen1": {
+    "typeId":"1",
+    "title":"Jeressia's Wash Day",
+    "isPrivate":"No",
+    "uid": "12345"
+  },
+  "regimen2": {
+    "typeId":"3",
+    "title":"Jeressia's Body Routine",
+    "isPrivate":"Yes",
+    "uid": "12345"
+  },
+  "regimen3": {
+    "typeId":"2",
+    "title":"Lisa's Dewy Skin Routine",
+    "isPrivate":"No",
+    "uid": "67890"
+  },
+  "regimen4": {
+    "typeId":"4",
+    "title":"Taylor's Zen Meditation",
+    "isPrivate":"No",
+    "uid": "88877"
+  },
+  "regimen5": {
+    "typeId":"4",
+    "title":"Jeressia's Meditation",
+    "isPrivate":"No",
+    "uid": "12345"
+  },
+  "regimen6": {
+    "typeId":"2",
+    "title":"Jeressia's Clear Skin",
+    "isPrivate":"No",
+    "uid": "12345"
+  }
+}
