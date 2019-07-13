@@ -1,12 +1,21 @@
 import React from 'react';
+
+import Auth from '../Auth/Auth';
+
 import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <button className="btn btn-danger">HELP ME</button>
-    </div>
-  );
+import fbConnection from '../helpers/data/connection';
+
+fbConnection();
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Auth />
+      </div>
+    );
+  }
 }
 
 export default App;
