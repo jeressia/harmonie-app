@@ -1,0 +1,26 @@
+{
+  "type1": {
+    "id":"1",
+    "name":"hair",
+    "color":"fbffe8",
+    "uid": "12345"
+  },
+  "type2": {
+    "id":"2",
+    "name":"skin",
+    "color":"d1a1a7",
+    "uid": "12345"
+  },
+  "type3": {
+    "id":"3",
+    "name":"body",
+    "color":"c73ad",
+    "uid": "12345"
+  },
+  "type4": {
+    "id":"4",
+    "name":"meditation",
+    "color":"bfbedb",
+    "uid": "67890"
+  }
+}

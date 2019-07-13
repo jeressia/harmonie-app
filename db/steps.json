@@ -1,0 +1,52 @@
+{
+  "1":{
+    "regimenId": "regimen1",
+    "stepNum": "1",
+    "stepText": "Rinse"
+  },
+  "2":{
+    "regimenId": "regimen1",
+    "stepNum": "2",
+    "stepText": "Lather"
+  },
+  "3":{
+    "regimenId": "regimen1",
+    "stepNum": "3",
+    "stepText": "Repeat"
+  },
+  "4":{
+    "regimenId": "regimen2",
+    "stepNum": "1",
+    "stepText": "Put lotion on legs"
+  },
+  "5":{
+    "regimenId": "regimen5",
+    "stepNum": "1",
+    "stepText": "Close your eyes"
+  },
+  "6":{
+    "regimenId": "regimen5",
+    "stepNum": "2",
+    "stepText": "Say OMMMMMMMMMMMMMMMMMMMM"
+  },
+  "7":{
+    "regimenId": "regimen6",
+    "stepNum": "1",
+    "stepText": "Cleanse face with Shea Moisture Black Soap."
+  },
+  "8":{
+    "regimenId": "regimen6",
+    "stepNum": "2",
+    "stepText": "Tone with witch hazel."
+  },
+  "9":{
+    "regimenId": "regimen6",
+    "stepNum": "3",
+    "stepText": "Moisturize skin with Aveeno face lotion."
+  },
+  "10":{
+    "regimenId": "regimen6",
+    "stepNum": "4",
+    "stepText": "Protect your skin with SPF 50."
+  }
+}
