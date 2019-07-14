@@ -9,13 +9,15 @@ class RegimenCard extends React.Component {
     const editLink = `/edit/${regimen.id}`;
     const singleLink = `/Regimen/${regimen.id}`;
     return (
-      <div className="RegimenCard col-3 m-2">
+      <div className="RegimenCard col-3">
         <div className="card">
           <div className="card-body" id={regimen.typeId}>
-            <h5 className="card-title">{regimen.title}</h5>
-            <Link className="btn btn-success" to={singleLink}>View</Link>
-            <p className="card-text">{regimen.color}</p>
-            <Link className="btn btn-info" to={editLink}>Edit</Link>
+            <Link className="card-title" to={singleLink}>{regimen.title}</Link>
+            <p className="card-text">Hair</p>
+            <div className="bottom-card-buttons">
+            <Link className="btn btn-secondary editBtn" to={editLink}><i class="fas fa-pencil-alt"></i></Link>
+            <Link className="btn btn-secondary deleteBtn" to={editLink}>x</Link>
+            </div>
           </div>
         </div>
       </div>
