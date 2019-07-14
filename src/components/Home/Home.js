@@ -36,8 +36,8 @@ class Home extends React.Component {
       <div className="Home">
       <div className="leftApp">
       <h1 className="regimenHeading">My Regimens</h1>
-            <div className="cards">
-            <div className="d-flex flex-wrap">
+            <div className="col">
+            <div className="d-flex flex-wrap col">
               {makeRegimenCards}
             </div>
             </div>
