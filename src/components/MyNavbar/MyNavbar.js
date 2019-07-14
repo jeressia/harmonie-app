@@ -36,13 +36,13 @@ class MyNavbar extends React.Component {
         return (
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/home' className="inactive" activeClassName="active">All Regimens&nbsp;&nbsp;|  </NavLink>
+              <NavLink tag={RRNavLink} to='/all' className="inactive" activeClassName="active">All Regimens&nbsp;&nbsp;|  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/new' className="inactive" activeClassName="active">My Regimens&nbsp;&nbsp;|  </NavLink>
+              <NavLink tag={RRNavLink} to='/home' className="inactive" activeClassName="active">My Regimens&nbsp;&nbsp;|  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/home' className="inactive" activeClassName="active">New Regimen&nbsp;&nbsp;|  </NavLink>
+              <NavLink tag={RRNavLink} to='/new' className="inactive" activeClassName="active">New Regimen&nbsp;&nbsp;|  </NavLink>
             </NavItem>
             <NavItem>
               <NavLink onClick={this.logMeOut} className="inactive" activeClassName="active">Logout</NavLink>
