@@ -12,6 +12,7 @@ import {
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import logo from './logo.png';
 import './MyNavbar.scss';
 
 class MyNavbar extends React.Component {
@@ -35,13 +36,16 @@ class MyNavbar extends React.Component {
         return (
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+              <NavLink tag={RRNavLink} to='/home' className="inactive" activeClassName="active">All Regimens&nbsp;&nbsp;|  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/new'>New Scat</NavLink>
+              <NavLink tag={RRNavLink} to='/new' className="inactive" activeClassName="active">My Regimens&nbsp;&nbsp;|  </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={this.logMeOut}>Logout</NavLink>
+              <NavLink tag={RRNavLink} to='/home' className="inactive" activeClassName="active">New Regimen&nbsp;&nbsp;|  </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={this.logMeOut} className="inactive" activeClassName="active">Logout</NavLink>
             </NavItem>
           </Nav>
         );
@@ -51,8 +55,8 @@ class MyNavbar extends React.Component {
 
     return (
       <div className="MyNavbar">
-        <Navbar>
-          <NavbarBrand href="/"><img src="https://github.com/jeressia/harmonie-app/blob/master/src/MyNavbar/logo.png?raw=true" className="logo" alt="logo"/></NavbarBrand>
+        <Navbar expand="md">
+          <NavbarBrand href="/"><img src={logo} alt="HARMONIE logo" className="logo"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
