@@ -1,0 +1,35 @@
+.MyRegimens{
+  width:100%;
+  height: 500px;
+  margin-top: 20px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.regimenHeading{
+  margin-top: 4%;
+  text-transform: uppercase;
+  float: left;
+  padding-left: 25px;
+}
+
+.regimenBox{
+  border: 2px solid black;
+}
+
+.leftApp{
+  width: 75%;
+  border-radius: 25px 0% 0% 25px;
+  background-color: rgba(255, 255, 255, 0.445);
+}
+
+.rightApp{
+  width: 25%;
+  border-radius: 0px 25px 25px 0px;
+  background-color: rgba(255, 255, 255, 0.623);
+}
+
+.username{
+  margin-top: 15%;
+  text-transform: uppercase;
+}
