@@ -1,4 +1,65 @@
-#1{
-background-color: #8d9c41 !important;
+#type1{
+background-color: #f6dfc1 !important;
 border: none;
+}
+#type2{
+background-color: #c59ea0 !important;
+border: none;
+}
+#type3{
+background-color: #ccdbc6 !important;
+border: none;
+}
+#type4{
+  background-color: #c8ccd5 !important;
+  border: none;
+  }
+
+.card{
+  margin: 5px;
+  border-radius: 10px !important;
+}
+
+.card-body{
+  padding:0.3em !important;
+  padding-top: 30px !important;
+  height: 200px;
+  border-radius: 10px !important;
+}
+
+.card-title{
+  margin-top: 30px;
+  height: 65px;
+  text-transform: uppercase;
+}
+
+.bottom-card-buttons{
+  position: absolute;
+  bottom: 0px;
+  padding: 5px;
+}
+
+.editBtn{
+  margin-right: 55px;
+  background-color: transparent !important;
+  outline: 0px;
+  border: 0px;
+  color: white !important;
+}
+
+.deleteBtn{
+  float: right;
+  background-color: transparent !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-secondary {
+  border: none !important;
+}
+
+.card-text{
+  margin-top: 25px;
+  text-transform: uppercase;
+  color: white;
 }

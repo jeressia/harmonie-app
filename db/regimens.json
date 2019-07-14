@@ -1,36 +1,36 @@
 {
   "regimen1": {
-    "typeId":"1",
+    "typeId":"type1",
     "title":"Jeressia's Wash Day",
     "isPrivate":"No",
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen2": {
-    "typeId":"3",
+    "typeId":"type3",
     "title":"Jeressia's Body Routine",
     "isPrivate":"Yes",
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen3": {
-    "typeId":"2",
-    "title":"Lisa's Dewy Skin Routine",
-    "isPrivate":"No",
-    "uid": "67890"
+    "typeId":"type2",
+    "title":"Jeressia's Dewy Skin Routine",
+    "isPrivate":"yes",
+    "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen4": {
-    "typeId":"4",
+    "typeId":"type4",
     "title":"Taylor's Zen Meditation",
     "isPrivate":"No",
     "uid": "88877"
   },
   "regimen5": {
-    "typeId":"4",
+    "typeId":"type4",
     "title":"Jeressia's Meditation",
     "isPrivate":"No",
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen6": {
-    "typeId":"2",
+    "typeId":"type2",
     "title":"Jeressia's Clear Skin",
     "isPrivate":"No",
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"

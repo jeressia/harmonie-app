@@ -8,21 +8,18 @@
 
 .regimenHeading{
   display: block;
-  margin-top: 4%;
+  margin-top: 2%;
   text-transform: uppercase;
   float: left;
   padding-left: 25px;
-  
-}
-
-.regimenBox{
-  border: 2px solid black;
+  color:#5f484d;
 }
 
 .leftApp{
   width: 75%;
   border-radius: 25px 0% 0% 25px;
   background-color: rgba(255, 255, 255, 0.445);
+  padding: 10px;
 }
 
 .rightApp{
@@ -34,6 +31,7 @@
 .username{
   margin-top: 15%;
   text-transform: uppercase;
+  color:#5f484d;
 }
 
 .cards{
