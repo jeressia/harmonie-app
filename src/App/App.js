@@ -11,6 +11,10 @@ import firebase from 'firebase/app';
 import Auth from '../components/Auth/Auth';
 import Home from '../components/Home/Home';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
+import AllRegimens from '../components/AllRegimens/AllRegimens';
+import NewRegimen from '../components/NewRegimen/NewRegimen';
+import EditRegimen from '../components/EditRegimen/EditRegimen';
+import SingleRegimen from '../components/SingleRegimen/SingleRegimen';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -67,9 +71,10 @@ class App extends React.Component {
               <PublicRoute path='/auth' component={Auth} authed={authed}/>
               <PrivateRoute path='/home' component={Home} authed={authed}/>
 
-              {/* <PrivateRoute path='/new' component={NewScat} authed={authed}/>
-              <PrivateRoute path='/edit/:id' component={EditScat} authed={authed}/>
-              <PrivateRoute path='/scat/:id' component={SingleScat} authed={authed}/> */}
+              <PrivateRoute path='/all' component={AllRegimens} authed={authed}/>
+              <PrivateRoute path='/new' component={NewRegimen} authed={authed}/>
+              <PrivateRoute path='/edit/:id' component={EditRegimen} authed={authed}/>
+              <PrivateRoute path='/regimen/:id' component={SingleRegimen} authed={authed}/>
 
               <Redirect from='*' to="/auth" />
             </Switch>
