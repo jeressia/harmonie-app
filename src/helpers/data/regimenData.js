@@ -14,7 +14,6 @@ const getMyRegimens = uid => new Promise((resolve, reject) => {
         });
       }
       resolve(regimens);
-      console.error(regimens);
     })
     .catch(err => reject(err));
 });
