@@ -14,8 +14,6 @@ import 'firebase/auth';
 
 import './MyNavbar.scss';
 
-const logo = './harmonielogo.png';
-
 class MyNavbar extends React.Component {
   state= {
     isOpen: false,
@@ -53,8 +51,8 @@ class MyNavbar extends React.Component {
 
     return (
       <div className="MyNavbar">
-        <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/"><img src="https://github.com/jeressia/harmonie-app/blob/master/src/MyNavbar/harmonielogo.png?raw=true" className="logo" alt="logo"/></NavbarBrand>
+        <Navbar>
+          <NavbarBrand href="/"><img src="https://github.com/jeressia/harmonie-app/blob/master/src/MyNavbar/logo.png?raw=true" className="logo" alt="logo"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
