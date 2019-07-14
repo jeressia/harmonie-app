@@ -1,0 +1,22 @@
+.logo {
+  max-width: 275px;
+}
+
+.nav{
+  background-color: transparent;
+}
+
+.inactive {
+  color: #5a5657;
+  text-decoration: none;
+}
+
+.inactive:hover {
+letter-spacing: 1px;
+color: #814b59;
+}
+
+.active {
+  color:#5f484d;
+  text-decoration: none;
+}

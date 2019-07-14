@@ -1,15 +1,15 @@
-import React from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
+import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-import flowerphoto from "./authphoto.jpg";
-import lemonphoto from "./facephoto.jpg";
-import feetphoto from "./feet.jpg";
+import flowerphoto from './authphoto.jpg';
+import lemonphoto from './facephoto.jpg';
+import feetphoto from './feet.jpg';
 
-import "./Auth.scss";
+import './Auth.scss';
 
 class Auth extends React.Component {
-  loginClickEvent = e => {
+  loginClickEvent = (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
