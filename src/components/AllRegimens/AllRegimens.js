@@ -1,10 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import './AllRegimens.scss';
 
 export class AllRegimens extends Component {
   render() {
     return (
-      <div>
-        <h1>All Regimens</h1>
+      <div className="AllRegimens">
+        <fieldset>
+          <legend>All Regimens</legend>
+          Name: <input type="text"/><br/>
+            Email: <input type="text"/><br/>
+              Date of birth: <input type="text"/>
+        </fieldset>
       </div>
     );
   }
