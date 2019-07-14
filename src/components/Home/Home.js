@@ -1,12 +1,50 @@
 import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-import MyRegimens from '../MyRegimens/MyRegimens';
+import regimenData from '../../helpers/data/regimenData';
+
+
+import RegimenCard from '../RegimenCard/RegimenCard';
+
+import './Home.scss';
 
 class Home extends React.Component {
+  state={
+    regimens: [],
+  }
+
+  getRegimens = () => {
+    regimenData.getMyRegimens(firebase.auth().currentUser.uid)
+      .then(regimens => this.setState({ regimens }))
+      .catch(err => console.error('uh-oh, regimens', err));
+  }
+
+  componentWillMount() {
+    this.getRegimens();
+  }
+
   render() {
+    const makeRegimenCards = this.state.regimens.map(regimen => (
+      <RegimenCard
+      key={regimen.id}
+      regimen={regimen}
+      />
+    ));
+
     return (
       <div className="Home">
-        <MyRegimens />
+      <div className="leftApp">
+      <h1 className="regimenHeading">My Regimens</h1>
+            <div className="cards">
+            <div className="d-flex flex-wrap">
+              {makeRegimenCards}
+            </div>
+            </div>
+            </div>
+        <div className="rightApp">
+          <h5 className="username">@JeressiaJay365</h5>
+        </div>
       </div>
     );
   }

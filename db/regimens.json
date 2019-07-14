@@ -3,13 +3,13 @@
     "typeId":"1",
     "title":"Jeressia's Wash Day",
     "isPrivate":"No",
-    "uid": "12345"
+    "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen2": {
     "typeId":"3",
     "title":"Jeressia's Body Routine",
     "isPrivate":"Yes",
-    "uid": "12345"
+    "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen3": {
     "typeId":"2",
@@ -27,12 +27,12 @@
     "typeId":"4",
     "title":"Jeressia's Meditation",
     "isPrivate":"No",
-    "uid": "12345"
+    "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen6": {
     "typeId":"2",
     "title":"Jeressia's Clear Skin",
     "isPrivate":"No",
-    "uid": "12345"
+    "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   }
 }
