@@ -6,6 +6,7 @@ import regimenData from '../../helpers/data/regimenData';
 
 
 import RegimenCard from '../RegimenCard/RegimenCard';
+import AddRegimenCard from '../AddRegimenCard/AddRegimenCard';
 
 import './Home.scss';
 
@@ -39,6 +40,7 @@ class Home extends React.Component {
             <div className="col-12">
             <div className="d-flex flex-wrap col-12">
               {makeRegimenCards}
+            <AddRegimenCard />
             </div>
             </div>
             </div>
