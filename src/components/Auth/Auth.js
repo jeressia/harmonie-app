@@ -19,7 +19,7 @@ class Auth extends React.Component {
     return (
       <div className="Auth d-flex">
         <div className="leftText">
-          <h1 className="authHeading">Find Your Balance.</h1>
+          <h1 className="authHeading">Sync Your Lifestyle.</h1>
           <p className="authText">
             Harmonie helps you create the perfect regimens for your busy
             lifestyle and pairs them with music that gets you excited about

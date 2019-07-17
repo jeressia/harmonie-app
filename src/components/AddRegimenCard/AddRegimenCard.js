@@ -10,7 +10,7 @@ class RegimenCard extends React.Component {
       <div className="RegimenCard col-3">
         <div className="addcard">
           <div className="card-body">
-            <Link to={ addLink} className="my-auto stretched-link">+</Link>
+            <Link to={ addLink} className="stretched-link plus">+</Link>
             <p className="smalltext">Add New Regimen</p>
             </div>
           </div>
