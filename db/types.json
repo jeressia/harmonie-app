@@ -25,7 +25,13 @@
   },
   "type5": {
     "id":"5",
-    "name":"Cleaning",
+    "name":"Home",
+    "color":"d5863f",
+    "uid": "67890"
+  },
+  "type6": {
+    "id":"6",
+    "name":"Other",
     "color":"d5863f",
     "uid": "67890"
   }
