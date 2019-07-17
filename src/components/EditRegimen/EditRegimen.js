@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import regimenData from '../../helpers/data/regimenData';
 import typeData from '../../helpers/data/typeData';
 
-
-
 const defaultRegimen = {
   typeId: '',
   title: '',

@@ -37,9 +37,12 @@ const putRegimen = (updatedRegimen, regimenId) => axios.put(`${baseUrl}/regimens
 
 const getSingleRegimen = regimenId => axios.get(`${baseUrl}/regimens/${regimenId}.json`);
 
+const deleteRegimen = regimenId => axios.delete(`${baseUrl}/regimens/${regimenId}.json`);
+
 export default {
   getMyRegimens,
   getAllRegimens,
   getSingleRegimen,
   putRegimen,
+  deleteRegimen,
 };

@@ -29,6 +29,12 @@ class Home extends React.Component {
       .catch(err => console.error('uh-oh, types', err));
   }
 
+  deleteRegimen = (regimenId) => {
+    regimenData.deleteRegimen(regimenId)
+      .then(() => this.getRegimens())
+      .catch(err => console.error('unable to delete', err));
+  }
+
   componentWillMount() {
     this.getRegimens();
     this.getTypes();
@@ -41,6 +47,7 @@ class Home extends React.Component {
       key={regimen.id}
       regimen={regimen}
       regimenType={myType || {}}
+      deleteRegimen={this.deleteRegimen}
       />;
     });
 
