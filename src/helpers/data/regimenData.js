@@ -39,10 +39,13 @@ const getSingleRegimen = regimenId => axios.get(`${baseUrl}/regimens/${regimenId
 
 const deleteRegimen = regimenId => axios.delete(`${baseUrl}/regimens/${regimenId}.json`);
 
+const postRegimen = NewRegimen => axios.post(`${baseUrl}/regimens.json`, NewRegimen);
+
 export default {
   getMyRegimens,
   getAllRegimens,
   getSingleRegimen,
   putRegimen,
   deleteRegimen,
+  postRegimen,
 };

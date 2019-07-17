@@ -45,18 +45,20 @@ export class EditRegimen extends Component {
     const saveMe = { ...this.state.newRegimen };
     const regimenId = this.props.match.params.id;
     regimenData.putRegimen(saveMe, regimenId)
-      .then(() => this.props.history.push('/home'))
+      .then(() => this.props.history.goBack())
       .catch(err => console.error('unable to save', err));
   }
 
   onCancel = (e) => {
     e.stopPropagation();
-    this.props.history.push('/home');
+    this.props.history.goBack();
   }
 
   titleChange = e => this.formFieldStringState('title', e);
 
   typeChange = e => this.formFieldStringState('type', e);
+
+  privateChange = e => this.formFieldStringState('isPrivate', e);
 
   render() {
     const { newRegimen, types } = this.state;
@@ -82,8 +84,8 @@ export class EditRegimen extends Component {
             onChange= {this.titleChange}
             />
           </div>
-          <input className="m-2" type="radio" name="isPrivate" value="public"/> Public
-<input className="m-2" type="radio" name="isPrivate" value="private"/> Private
+          <input className="m-2" type="radio" name="isPrivate" value="public" onChange={this.publicChange}/> Public
+<input className="m-2" type="radio" name="isPrivate" value="private" onChange={this.privateChange}/> Private
           <button type="submit" className="btn btn-primary d-block" onClick={this.formSubmit}>Update Regimen</button>
           <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
           </form>
