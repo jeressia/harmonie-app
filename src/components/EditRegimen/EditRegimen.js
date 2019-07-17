@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import regimenData from '../../helpers/data/regimenData';
 import typeData from '../../helpers/data/typeData';
 
+
+
 const defaultRegimen = {
   typeId: '',
   title: '',
@@ -44,7 +46,6 @@ export class EditRegimen extends Component {
     e.stopPropagation();
     const saveMe = { ...this.state.newRegimen };
     const regimenId = this.props.match.params.id;
-    console.error(regimenId);
     regimenData.putRegimen(saveMe, regimenId)
       .then(() => this.props.history.push('/home'))
       .catch(err => console.error('unable to save', err));
@@ -62,8 +63,9 @@ export class EditRegimen extends Component {
   render() {
     const { newRegimen, types } = this.state;
     return (
-      <div>
-        <h1>Edit Regimen</h1>
+      <div className="Home">
+      <div className="leftApp">
+      <h1 className="regimenHeading">Edit {newRegimen.title}</h1>
         <form onSubmit={ e => e.preventDefault()}>
         <select value={newRegimen.type} onChange={this.typeChange} id="type">
           <option value="type">Type</option>
@@ -87,6 +89,10 @@ export class EditRegimen extends Component {
           <button type="submit" className="btn btn-primary d-block" onClick={this.formSubmit}>Update Regimen</button>
           <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
           </form>
+      </div>
+        <div className="rightApp">
+          <h5 className="username">@JeressiaJay365</h5>
+        </div>
       </div>
     );
   }

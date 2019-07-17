@@ -9,7 +9,6 @@ import './RegimenCard.scss';
 class RegimenCard extends React.Component {
   render() {
     const { regimen, regimenType } = this.props;
-    console.error(regimenType, 'RegimenType');
     const editLink = `/edit/${regimen.id}`;
     const singleLink = `/Regimen/${regimen.id}`;
     const creator = firebase.auth().currentUser.uid === regimen.uid;
