@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import typeData from '../../helpers/data/typeData';
 import regimenData from '../../helpers/data/regimenData';
 
 
@@ -13,6 +14,7 @@ import './Home.scss';
 class Home extends React.Component {
   state={
     regimens: [],
+    types: [],
   }
 
   getRegimens = () => {
@@ -21,17 +23,26 @@ class Home extends React.Component {
       .catch(err => console.error('uh-oh, regimens', err));
   }
 
+  getTypes = () => {
+    typeData.getTypes()
+      .then(types => this.setState({ types }))
+      .catch(err => console.error('uh-oh, types', err));
+  }
+
   componentWillMount() {
     this.getRegimens();
+    this.getTypes();
   }
 
   render() {
-    const makeRegimenCards = this.state.regimens.map(regimen => (
-      <RegimenCard
+    const makeRegimenCards = this.state.regimens.map((regimen) => {
+      const myType = this.state.types.find(x => x.id === regimen.typeId);
+      return <RegimenCard
       key={regimen.id}
       regimen={regimen}
-      />
-    ));
+      regimenType={myType || {}}
+      />;
+    });
 
     return (
       <div className="Home">

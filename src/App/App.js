@@ -75,7 +75,7 @@ class App extends React.Component {
               <PrivateRoute path='/edit/:id' component={EditRegimen} authed={authed}/>
               <PrivateRoute path='/regimen/:id' component={SingleRegimen} authed={authed}/>
 
-              <Redirect from='*' to="/auth" />
+              {/* <Redirect from='*' to="/auth" /> */}
             </Switch>
           </div>
       </React.Fragment>

@@ -18,4 +18,28 @@ const getMyRegimens = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { getMyRegimens };
+const getAllRegimens = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/regimens.json`)
+    .then((res) => {
+      const regimens = [];
+      Object.keys(res.data).forEach((fbKey) => {
+        res.data[fbKey].id = fbKey;
+        if (res.data[fbKey].isPrivate === false) {
+          regimens.push(res.data[fbKey]);
+        }
+      });
+      resolve(regimens);
+    })
+    .catch(err => reject(err));
+});
+
+const putRegimen = (updatedRegimen, regimenId) => axios.put(`${baseUrl}/regimens/${regimenId}.json`, updatedRegimen);
+
+const getSingleRegimen = regimenId => axios.get(`${baseUrl}/regimens/${regimenId}.json`);
+
+export default {
+  getMyRegimens,
+  getAllRegimens,
+  getSingleRegimen,
+  putRegimen,
+};
