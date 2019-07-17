@@ -5,7 +5,6 @@ import regimenData from '../../helpers/data/regimenData';
 
 
 import RegimenCard from '../RegimenCard/RegimenCard';
-import AddRegimenCard from '../AddRegimenCard/AddRegimenCard';
 
 import '../Home/Home.scss';
 
@@ -34,7 +33,7 @@ class AllRegimens extends React.Component {
 
   render() {
     const makeAllRegimenCards = this.state.regimens.map((regimen) => {
-      const myType = this.state.types.find(x => x.id === regimen.typeId);
+      const myType = this.state.types.find(x => x.id === regimen.type);
       return <RegimenCard
       key={regimen.id}
       regimen={regimen}
@@ -49,7 +48,6 @@ class AllRegimens extends React.Component {
             <div className="col-12">
             <div className="d-flex flex-wrap col-12">
               {makeAllRegimenCards}
-            <AddRegimenCard />
             </div>
             </div>
             </div>
