@@ -1,48 +1,48 @@
 {
   "regimen1": {
-    "typeId":"type1",
+    "type":"type1",
     "title":"Jeressia's Wash Day",
     "isPrivate":false,
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen2": {
-    "typeId":"type5",
+    "type":"type5",
     "title":"Maya's Study Regimen",
     "isPrivate":false,
     "uid": "35543"
   },
   "regimen3": {
-    "typeId":"type3",
+    "type":"type3",
     "title":"Jeressia's Body Routine",
     "isPrivate":true,
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen4": {
-    "typeId":"type2",
+    "type":"type2",
     "title":"Jeressia's Dewy Skin Routine",
     "isPrivate":true,
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen5": {
-    "typeId":"type4",
+    "type":"type4",
     "title":"Taylor's Zen Meditation",
-    "isPrivate":false,
+    "isPrivate":true,
     "uid": "88877"
   },
   "regimen6": {
-    "typeId":"type4",
+    "type":"type4",
     "title":"Jeressia's Meditation",
     "isPrivate":false,
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen7": {
-    "typeId":"type2",
+    "type":"type2",
     "title":"Jeressia's Clear Skin",
     "isPrivate":false,
     "uid": "LtBwSO468aRtc090bYcwWnCRK1S2"
   },
   "regimen8": {
-    "typeId":"type5",
+    "type":"type5",
     "title":"Andy's Cleaning Routine",
     "isPrivate":false,
     "uid": "25841"

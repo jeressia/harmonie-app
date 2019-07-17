@@ -42,7 +42,7 @@ class Home extends React.Component {
 
   render() {
     const makeRegimenCards = this.state.regimens.map((regimen) => {
-      const myType = this.state.types.find(x => x.id === regimen.typeId);
+      const myType = this.state.types.find(x => x.id === regimen.type);
       return <RegimenCard
       key={regimen.id}
       regimen={regimen}

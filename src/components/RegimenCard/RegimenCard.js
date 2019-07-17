@@ -5,8 +5,6 @@ import 'firebase/auth';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import regimenData from '../../helpers/data/regimenData';
-
 import './RegimenCard.scss';
 
 class RegimenCard extends React.Component {
@@ -27,7 +25,7 @@ class RegimenCard extends React.Component {
     return (
       <div className="RegimenCard col-3">
         <div className="card">
-          <div className="card-body" id={regimen.typeId}>
+          <div className="card-body" id={regimen.type}>
             <Link className="card-title" to={singleLink}>{regimen.title}</Link>
             <p className="card-text">{regimenType.name}</p>
             {
