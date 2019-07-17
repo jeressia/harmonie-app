@@ -28,7 +28,7 @@ class Singleregimen extends React.Component {
       <div className="regimenCard col-4 m-2">
         <h3>{regimen.isPrivate}</h3>
         <Link className="btn btn-info" to={editLink}>Edit</Link>
-        <button href="#" className="btn btn-danger" onClick={this.deleteregimen}>Delete</button>
+        <button href="#" className="btn btn-danger" onClick={this.deleteRegimen}>Delete</button>
       </div>
       </div>
       <div className="rightApp">

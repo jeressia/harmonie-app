@@ -2,11 +2,23 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+
+import regimenData from '../../helpers/data/regimenData';
 
 import './RegimenCard.scss';
 
 class RegimenCard extends React.Component {
+  static propTypes = {
+    deleteRegimen: propTypes.func.isRequired,
+  };
+
+  deleteMe = () => {
+    const regimenId = this.props.regimen.id;
+    this.props.deleteRegimen(regimenId);
+  }
+
   render() {
     const { regimen, regimenType } = this.props;
     const editLink = `/edit/${regimen.id}`;
@@ -22,7 +34,7 @@ class RegimenCard extends React.Component {
             creator ? (
               <div className="bottom-card-buttons">
             <Link className="btn btn-secondary editBtn" to={editLink}><i class="fas fa-pencil-alt"></i></Link>
-            <Link className="btn btn-secondary deleteBtn" to={editLink}>x</Link>
+            <Link className="btn btn-secondary deleteBtn" onClick={this.deleteMe}>x</Link>
             </div>
             ) : (
               null
