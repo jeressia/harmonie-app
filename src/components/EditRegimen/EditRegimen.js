@@ -10,17 +10,17 @@ const defaultRegimen = {
   uid: '',
 };
 
-// const defaultType = {
-//   id: '',
-//   name: '',
-//   color: '',
-//   uid: '',
-// };
+const defaultStep = {
+  regimenId: '',
+  stepNum: '',
+  stepText: '',
+};
 
 export class EditRegimen extends Component {
   state = {
     newRegimen: defaultRegimen,
     types: [],
+    steps: defaultStep,
   }
 
   componentDidMount() {
@@ -38,6 +38,12 @@ export class EditRegimen extends Component {
     const tempRegimen = { ...this.state.newRegimen };
     tempRegimen[name] = e.target.value;
     this.setState({ newRegimen: tempRegimen });
+  }
+
+  formFieldStringStateSteps = (name, e) => {
+    const tempSteps = { ...this.state.newSteps };
+    tempSteps[name] = e.target.value;
+    this.setState({ newSteps: tempSteps });
   }
 
   formSubmit = (e) => {
@@ -58,10 +64,14 @@ export class EditRegimen extends Component {
 
   typeChange = e => this.formFieldStringState('type', e);
 
-  privateChange = e => this.formFieldStringState('isPrivate', e);
+  privacyChange = e => this.formFieldStringState('isPrivate', e);
+
+  oneChange = e => this.formFieldStringStateSteps('stepText', e);
 
   render() {
     const { newRegimen, types } = this.state;
+    // const { trueValue } = JSON.parse('true');
+    // const { falseValue } = JSON.parse('false');
     return (
       <div className="Home">
       <div className="leftApp">
@@ -73,6 +83,8 @@ export class EditRegimen extends Component {
             <option key={type.id} value={type.id}>{type.name}</option>
           ))}
         </select>
+        <input className="m-2" type="radio" name="isPrivate" value={false} onChange={this.privacyChange} checked={this.state.newRegimen.isPrivate === 'false'}/> Public
+<input className="m-2" type="radio" name="isPrivate" value={true} onChange={this.privacyChange} checked={this.state.newRegimen.isPrivate === 'true'}/> Private
           <div className="form-group">
             <label htmlFor="title">Title</label>
             <input
@@ -84,8 +96,39 @@ export class EditRegimen extends Component {
             onChange= {this.titleChange}
             />
           </div>
-          <input className="m-2" type="radio" name="isPrivate" value="public" onChange={this.publicChange}/> Public
-<input className="m-2" type="radio" name="isPrivate" value="private" onChange={this.privateChange}/> Private
+          <div className="form-group">
+            <label htmlFor="taskOne">Task One</label>
+            <input
+            type="text"
+            className="form-control"
+            id="taskOne"
+            placeholder="Task One"
+            value = {newRegimen.title}
+            onChange= {this.oneChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="taskTwo">Task Two</label>
+            <input
+            type="text"
+            className="form-control"
+            id="taskTwo"
+            placeholder="Task Two"
+            value = {newRegimen.title}
+            onChange= {this.titleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="taskThree">Task Three</label>
+            <input
+            type="text"
+            className="form-control"
+            id="taskThree                 "
+            placeholder="Task Three"
+            value = {newRegimen.title}
+            onChange= {this.titleChange}
+            />
+          </div>
           <button type="submit" className="btn btn-primary d-block" onClick={this.formSubmit}>Update Regimen</button>
           <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
           </form>

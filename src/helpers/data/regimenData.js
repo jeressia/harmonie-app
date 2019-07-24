@@ -24,7 +24,7 @@ const getAllRegimens = () => new Promise((resolve, reject) => {
       const regimens = [];
       Object.keys(res.data).forEach((fbKey) => {
         res.data[fbKey].id = fbKey;
-        if (res.data[fbKey].isPrivate === false) {
+        if (res.data[fbKey].isPrivate === 'false') {
           regimens.push(res.data[fbKey]);
         }
       });

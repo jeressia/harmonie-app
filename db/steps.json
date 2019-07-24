@@ -1,32 +1,32 @@
 {
   "1":{
     "regimenId": "regimen1",
-    "stepNum": "1",
+    "stepNum": 1,
     "stepText": "Rinse"
   },
   "2":{
     "regimenId": "regimen1",
-    "stepNum": "2",
+    "stepNum": 2,
     "stepText": "Lather"
   },
   "3":{
     "regimenId": "regimen1",
-    "stepNum": "3",
+    "stepNum": 3,
     "stepText": "Repeat"
   },
   "4":{
     "regimenId": "regimen2",
-    "stepNum": "1",
-    "stepText": "Put lotion on legs"
+    "stepNum": 1,
+    "stepText": "Grab highlighters"
   },
   "5":{
     "regimenId": "regimen5",
-    "stepNum": "1",
+    "stepNum": 1,
     "stepText": "Close your eyes"
   },
   "6":{
     "regimenId": "regimen5",
-    "stepNum": "2",
+    "stepNum": 2,
     "stepText": "Say OMMMMMMMMMMMMMMMMMMMM"
   },
   "7":{
@@ -48,5 +48,65 @@
     "regimenId": "regimen6",
     "stepNum": "4",
     "stepText": "Protect your skin with SPF 50."
+  },
+  "11":{
+    "regimenId": "regimen4",
+    "stepNum": 1,
+    "stepText": "Close your eyes"
+  },
+  "12":{
+    "regimenId": "regimen4",
+    "stepNum": 2,
+    "stepText": "Say OMMMMMMMMMMMMMMMMMMMM"
+  },
+  "13":{
+    "regimenId": "regimen3",
+    "stepNum": 1,
+    "stepText": "Shave Legs"
+  },
+  "14":{
+    "regimenId": "regimen7",
+    "stepNum": "1",
+    "stepText": "Cleanse face with Shea Moisture Black Soap."
+  },
+  "15":{
+    "regimenId": "regimen7",
+    "stepNum": "2",
+    "stepText": "Tone with witch hazel."
+  },
+  "16":{
+    "regimenId": "regimen7",
+    "stepNum": "3",
+    "stepText": "Moisturize skin with Aveeno face lotion."
+  },
+  "17":{
+    "regimenId": "regimen8",
+    "stepNum": "1",
+    "stepText": "Start laundry."
+  },
+  "18":{
+    "regimenId": "regimen8",
+    "stepNum": "2",
+    "stepText": "Take out the trash."
+  },
+  "19":{
+    "regimenId": "regimen8",
+    "stepNum": "3",
+    "stepText": "Sweep, mop, and vacuum."
+  },
+  "20":{
+    "regimenId": "regimen8",
+    "stepNum": "4",
+    "stepText": "Wash dishes."
+  },
+  "21":{
+    "regimenId": "regimen8",
+    "stepNum": "5",
+    "stepText": "Clean the bathroom."
+  },
+  "22":{
+    "regimenId": "regimen8",
+    "stepNum": "6",
+    "stepText": "Fold and put laundry away."
   }
 }

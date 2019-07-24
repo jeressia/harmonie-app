@@ -1,4 +1,8 @@
-form {
-  margin-top: 140px;
-  max-width:450px;
+label {
+  float: left;
+  margin-right: 1em; 
 }
+
+  .form-control{
+    float: right;
+  }

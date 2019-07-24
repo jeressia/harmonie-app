@@ -2,9 +2,8 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import typeData from '../../helpers/data/typeData';
 import regimenData from '../../helpers/data/regimenData';
-
+import typeData from '../../helpers/data/typeData';
 
 import RegimenCard from '../RegimenCard/RegimenCard';
 import AddRegimenCard from '../AddRegimenCard/AddRegimenCard';
