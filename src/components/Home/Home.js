@@ -5,6 +5,7 @@ import 'firebase/auth';
 import regimenData from '../../helpers/data/regimenData';
 import typeData from '../../helpers/data/typeData';
 
+import Users from '../Users/Users';
 import RegimenCard from '../RegimenCard/RegimenCard';
 import AddRegimenCard from '../AddRegimenCard/AddRegimenCard';
 
@@ -67,7 +68,9 @@ class Home extends React.Component {
             <div className="col-12">
               <div className="headerOptions">
               <h1 className="regimenHeading">My Regimens</h1>
-              <i class="fas fa-user" id="fa-user" onMouseEnter={this.cardFlipEvent}></i>
+              <div className="icon" onMouseEnter={this.cardFlipEvent}>
+              <i class="fas fa-user" id="fa-user"></i>
+              </div>
               </div>
               <div className="d-flex flex-wrap col-12">
                 {makeRegimenCards}
@@ -76,10 +79,8 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="back face center" onMouseLeave={this.cardFlipBackEvent}>
-        <h1 className="regimenHeading">@JERESSIAJAY365</h1>
-          <p>This is nice for exposing more information about an image.</p>
-          <p>Any content can go here.</p>
+        <div className="back face center">
+       <Users/>
         </div>
         </div>
     </div>
