@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink as RRNavLink } from 'react-router-dom';
+import { NavLink as RRNavLink, Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -56,7 +56,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
         <Navbar expand="md">
-          <NavbarBrand href="/"><img src={logo} alt="HARMONIE logo" className="logo"/></NavbarBrand>
+          <Link to="/home"><NavbarBrand><img src={logo} alt="HARMONIE logo" className="logo"/></NavbarBrand></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
