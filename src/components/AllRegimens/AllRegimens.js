@@ -3,7 +3,7 @@ import React from 'react';
 import typeData from '../../helpers/data/typeData';
 import regimenData from '../../helpers/data/regimenData';
 
-
+import Users from '../Users/Users';
 import RegimenCard from '../RegimenCard/RegimenCard';
 
 import '../Home/Home.scss';
@@ -37,6 +37,14 @@ class AllRegimens extends React.Component {
     this.getTypes();
   }
 
+  cardFlipEvent = () => {
+    document.getElementById('f1_card').classList.add('card-flip');
+  }
+
+  cardFlipBackEvent = () => {
+    document.getElementById('f1_card').classList.remove('card-flip');
+  }
+
   render() {
     const makeAllRegimenCards = this.state.regimens.map((regimen) => {
       const myType = this.state.types.find(x => x.id === regimen.type);
@@ -50,26 +58,27 @@ class AllRegimens extends React.Component {
 
     return (
       <div id="f1_container">
-      <div id="f1_card" class="shadow">
-        <div class="front face">
-      <div className="Home">
-            <div className="col-12">
-            <div className="headerOptions">
-              <h1 className="regimenHeading">All Regimens</h1>
-              <i class="fas fa-user" id="fa-user"></i>
-              </div>
-            <div className="d-flex flex-wrap col-12">
-              {makeAllRegimenCards}
+        <div id="f1_card" className="shadow">
+          <div className="front face">
+            <div className="Home">
+              <div className="col-12">
+                <div className="headerOptions">
+                <h1 className="regimenHeading">All Regimens</h1>
+                <div className="icon" onMouseEnter={this.cardFlipEvent}>
+                <i class="fas fa-user" id="fa-user"></i>
+                </div>
+                </div>
+                <div className="d-flex flex-wrap col-12">
+                  {makeAllRegimenCards}
+                  </div>
             </div>
-            </div>
-            </div>
-            </div>
-            <div class="back face center">
-            <p>This is nice for exposing more information about an image.</p>
-          <p>Any content can go here.</p>
-            </div>
-            </div>
-            </div>
+          </div>
+        </div>
+        <div className="back face center">
+       <Users/>
+        </div>
+        </div>
+    </div>
     );
   }
 }
