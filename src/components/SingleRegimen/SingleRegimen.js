@@ -25,8 +25,23 @@ class Singleregimen extends React.Component {
   getSteps = () => {
     const regimenId = this.props.match.params.id;
     stepData.getMySteps(regimenId)
-      .then(steps => this.setState({ steps }))
+      .then((steps) => {
+        const stepsToSort = steps;
+        stepsToSort.sort((a, b) => {
+          const aStep = a.stepNum;
+          const bStep = b.stepNum;
+          // eslint-disable-next-line no-nested-ternary
+          return aStep < bStep ? -1 : aStep > bStep ? 1 : 0;
+        });
+        this.setState({ steps: stepsToSort });
+      })
       .catch(err => console.error('uh-oh, types', err));
+  }
+
+  deleteMe = (regimenId) => {
+    regimenData.deleteRegimen(regimenId)
+      .then(() => this.props.history.push('/home'))
+      .catch(err => console.error('unable to delete', err));
   }
 
   componentDidMount() {
