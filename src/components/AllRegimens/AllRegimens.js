@@ -49,19 +49,27 @@ class AllRegimens extends React.Component {
     });
 
     return (
+      <div id="f1_container">
+      <div id="f1_card" class="shadow">
+        <div class="front face">
       <div className="Home">
-      <div className="leftApp">
-      <h1 className="regimenHeading">All Regimens</h1>
             <div className="col-12">
+            <div className="headerOptions">
+              <h1 className="regimenHeading">All Regimens</h1>
+              <i class="fas fa-user" id="fa-user"></i>
+              </div>
             <div className="d-flex flex-wrap col-12">
               {makeAllRegimenCards}
             </div>
             </div>
             </div>
-        <div className="rightApp">
-          <h5 className="username">@JeressiaJay365</h5>
-        </div>
-      </div>
+            </div>
+            <div class="back face center">
+            <p>This is nice for exposing more information about an image.</p>
+          <p>Any content can go here.</p>
+            </div>
+            </div>
+            </div>
     );
   }
 }

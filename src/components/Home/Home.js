@@ -14,6 +14,7 @@ class Home extends React.Component {
   state={
     regimens: [],
     types: [],
+    currentState: true,
   }
 
   getRegimens = () => {
@@ -39,6 +40,14 @@ class Home extends React.Component {
     this.getTypes();
   }
 
+  cardFlipEvent = () => {
+    document.getElementById('f1_card').classList.add('card-flip');
+  }
+
+  cardFlipBackEvent = () => {
+    document.getElementById('f1_card').classList.remove('card-flip');
+  }
+
   render() {
     const makeRegimenCards = this.state.regimens.map((regimen) => {
       const myType = this.state.types.find(x => x.id === regimen.type);
@@ -51,20 +60,29 @@ class Home extends React.Component {
     });
 
     return (
-      <div className="Home">
-      <div className="leftApp">
-      <h1 className="regimenHeading">My Regimens</h1>
+    <div id="f1_container">
+      <div id="f1_card" className="shadow">
+        <div className="front face">
+          <div className="Home">
             <div className="col-12">
-            <div className="d-flex flex-wrap col-12">
-              {makeRegimenCards}
-            <AddRegimenCard />
+              <div className="headerOptions">
+              <h1 className="regimenHeading">My Regimens</h1>
+              <i class="fas fa-user" id="fa-user" onMouseEnter={this.cardFlipEvent}></i>
+              </div>
+              <div className="d-flex flex-wrap col-12">
+                {makeRegimenCards}
+                <AddRegimenCard />
+              </div>
             </div>
-            </div>
-            </div>
-        <div className="rightApp">
-          <h5 className="username">@JeressiaJay365</h5>
+          </div>
         </div>
-      </div>
+        <div className="back face center" onMouseLeave={this.cardFlipBackEvent}>
+        <h1 className="regimenHeading">@JERESSIAJAY365</h1>
+          <p>This is nice for exposing more information about an image.</p>
+          <p>Any content can go here.</p>
+        </div>
+        </div>
+    </div>
     );
   }
 }

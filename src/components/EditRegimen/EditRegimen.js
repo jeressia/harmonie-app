@@ -96,39 +96,6 @@ export class EditRegimen extends Component {
             onChange= {this.titleChange}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="taskOne">Task One</label>
-            <input
-            type="text"
-            className="form-control"
-            id="taskOne"
-            placeholder="Task One"
-            value = {newRegimen.title}
-            onChange= {this.oneChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="taskTwo">Task Two</label>
-            <input
-            type="text"
-            className="form-control"
-            id="taskTwo"
-            placeholder="Task Two"
-            value = {newRegimen.title}
-            onChange= {this.titleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="taskThree">Task Three</label>
-            <input
-            type="text"
-            className="form-control"
-            id="taskThree                 "
-            placeholder="Task Three"
-            value = {newRegimen.title}
-            onChange= {this.titleChange}
-            />
-          </div>
           <button type="submit" className="btn btn-primary d-block" onClick={this.formSubmit}>Update Regimen</button>
           <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
           </form>

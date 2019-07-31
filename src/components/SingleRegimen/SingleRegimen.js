@@ -74,9 +74,6 @@ class Singleregimen extends React.Component {
           </div>
           </div>
           </div>
-      <div className="rightApp">
-          <h5 className="username">@JeressiaJay365</h5>
-        </div>
       </div>
     );
   }

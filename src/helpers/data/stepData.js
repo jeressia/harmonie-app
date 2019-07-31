@@ -19,6 +19,9 @@ const getMySteps = regimenId => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
+const postStep = NewStep => axios.post(`${baseUrl}/steps.json`, NewStep);
+
 export default {
   getMySteps,
+  postStep
 };
