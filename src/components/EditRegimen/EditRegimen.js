@@ -70,8 +70,6 @@ export class EditRegimen extends Component {
 
   render() {
     const { newRegimen, types } = this.state;
-    // const { trueValue } = JSON.parse('true');
-    // const { falseValue } = JSON.parse('false');
     return (
       <div className="Home">
       <div className="leftApp">
@@ -100,9 +98,6 @@ export class EditRegimen extends Component {
           <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
           </form>
       </div>
-        <div className="rightApp">
-          <h5 className="username">@JeressiaJay365</h5>
-        </div>
       </div>
     );
   }

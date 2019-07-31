@@ -55,6 +55,21 @@ export class NewRegimen extends Component {
       .catch(err => console.error('error'));
   }
 
+  formSubmit = (e) => {
+    const newStepObj = {
+      regimenId: this.state.regimenId,
+      stepNum: this.state.stepNum,
+      stepText: this.state.newStep,
+    };
+    e.preventDefault();
+    stepData.postStep(newStepObj)
+      .then(() => {
+        this.setState({ stepNum: this.state.stepNum + 1, newStep: '' });
+        this.getAllSteps();
+      });
+    this.props.history.push('/home');
+  }
+
   formFieldStringState = (name, e) => {
     const tempRegimen = { ...this.state.newRegimen };
     tempRegimen[name] = e.target.value;
@@ -65,11 +80,6 @@ export class NewRegimen extends Component {
     const tempStep = { ...this.state.newStep };
     tempStep[name] = e.target.value;
     this.setState({ newStep: tempStep });
-  }
-
-  formSubmit = (e) => {
-    e.preventDefault();
-    this.props.history.push('/home');
   }
 
   onCancel = (e) => {
