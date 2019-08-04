@@ -131,12 +131,12 @@ export class NewRegimen extends Component {
                   <form onSubmit={ e => e.preventDefault()}>
                   {showSteps}
                   <div className="form-group">
-                    <label htmlFor="title">Task One</label>
+                    <label htmlFor="title">Enter a step</label>
                     <input
                     type="text"
                     className="form-control"
                     id="taskOne"
-                    placeholder="Task One"
+                    placeholder="Enter step..."
                     value = {newStep}
                     onChange= {this.stepChange}
                     />

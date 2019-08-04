@@ -31,8 +31,8 @@ class RegimenCard extends React.Component {
             {
             creator ? (
               <div className="bottom-card-buttons">
-            <Link className="btn btn-secondary editBtn" to={editLink}><i class="fas fa-pencil-alt"></i></Link>
-            <Link className="btn btn-secondary deleteBtn" onClick={this.deleteMe}>x</Link>
+            <Link className="btn btn-secondary editBtn" to={editLink}><i className="fas fa-pencil-alt"></i></Link>
+            <button className="btn btn-secondary deleteBtn" onClick={this.deleteMe}>x</button>
             </div>
             ) : (
               null
