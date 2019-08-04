@@ -71,6 +71,9 @@ export class EditRegimen extends Component {
   render() {
     const { newRegimen, types } = this.state;
     return (
+      <div id="f2_container">
+      <div id="f2_card" className="shadow">
+        <div className="front face">
       <div className="Home">
       <div className="leftApp">
       <h1 className="regimenHeading">Edit {newRegimen.title}</h1>
@@ -99,6 +102,9 @@ export class EditRegimen extends Component {
           </form>
       </div>
       </div>
+      </div>
+            </div>
+            </div>
     );
   }
 }

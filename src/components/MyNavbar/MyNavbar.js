@@ -4,7 +4,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -56,7 +55,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
         <Navbar expand="md">
-          <Link to="/home"><NavbarBrand><img src={logo} alt="HARMONIE logo" className="logo"/></NavbarBrand></Link>
+          <Link to="/home" className="navbar-brand"><img src={logo} alt="HARMONIE logo" className="logo"/></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}

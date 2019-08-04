@@ -16,7 +16,6 @@ class Singleregimen extends React.Component {
 
   getSingleRegimen = () => {
     const regimenId = this.props.match.params.id;
-    console.error(regimenId, 'regimenId');
     regimenData.getSingleRegimen(regimenId)
       .then(regimenPromise => this.setState({ regimen: regimenPromise.data }))
       .catch(err => console.error('unable to get single regimen', err));
@@ -38,10 +37,9 @@ class Singleregimen extends React.Component {
       .catch(err => console.error('uh-oh, types', err));
   }
 
-  deleteMe = (regimenId) => {
-    regimenData.deleteRegimen(regimenId)
-      .then(() => this.props.history.push('/home'))
-      .catch(err => console.error('unable to delete', err));
+  onCancel = (e) => {
+    e.stopPropagation();
+    this.props.history.goBack();
   }
 
   componentDidMount() {
@@ -51,7 +49,6 @@ class Singleregimen extends React.Component {
 
   render() {
     const { regimen, steps } = this.state;
-    console.error(steps);
     const editLink = `/edit/${this.props.match.params.id}`;
     const creator = firebase.auth().currentUser.uid === regimen.uid;
     return (
@@ -60,32 +57,21 @@ class Singleregimen extends React.Component {
       <h1 className="regimenHeading">{regimen.title}    {
             creator ? (
               <div>
-            <Link to={editLink}><i class="fas fa-pencil-alt"></i></Link>
+            <Link to={editLink}><i className="fas fa-pencil-alt"></i></Link>
             </div>
             ) : (
               null
             )
           }</h1>
       <div>
-        <div class="stepTable">
-      <table class="table table-striped">
+        <div className="stepTable">
+      <table className="table table-striped">
         <tbody>
-        {steps.map(step => <tr>
-            <div class="stepNum">{step.stepNum}</div> {step.stepText}
-          </tr>)
-        }
+        {steps.map(step => <tr key={step.id}><span className="stepNum">{step.stepNum}</span>{step.stepText}</tr>)}
         </tbody>
           </table>
-        <Link className="btn btn-light" onClick={this.startMe}>Start</Link>
-        {
-            creator ? (
-              <div>
-            <Link className="btn" onClick={this.deleteMe}>x</Link>
-            </div>
-            ) : (
-              null
-            )
-          }
+        <button className="btn btn-light" onClick={this.startMe}>Start</button>
+        <button className="btn" onClick={this.onCancel}>Back</button>
           </div>
           </div>
           </div>
@@ -93,5 +79,6 @@ class Singleregimen extends React.Component {
     );
   }
 }
+
 
 export default Singleregimen;

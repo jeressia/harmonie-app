@@ -69,7 +69,7 @@ class Home extends React.Component {
               <div className="headerOptions">
               <h1 className="regimenHeading">My Regimens</h1>
               <div className="icon" onMouseEnter={this.cardFlipEvent}>
-              <i class="fas fa-user" id="fa-user"></i>
+              <i className="fas fa-user" id="fa-user"></i>
               </div>
               </div>
               <div className="d-flex flex-wrap col-12">
