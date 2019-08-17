@@ -76,7 +76,8 @@ export class EditRegimen extends Component {
         <div className="front face">
       <div className="Home">
       <div className="leftApp">
-      <h1 className="regimenHeading">Edit {newRegimen.title}</h1>
+      <p className="regimenHeading">Edit {newRegimen.title}</p>
+      <h1 className="regimenTitle">{newRegimen.title}</h1>
         <form onSubmit={ e => e.preventDefault()}>
         <select value={newRegimen.type} onChange={this.typeChange} id="type">
           <option value="type">Type</option>

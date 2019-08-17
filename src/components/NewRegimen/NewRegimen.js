@@ -120,11 +120,10 @@ export class NewRegimen extends Component {
     } = this.state;
     const showSteps = this.state.steps.map(step => (<div>{step.stepText}</div>));
     return (
-      <div id="f2_container">
-      <div id="f2_card" class="shadow">
-        <div class="front face">
-          <div className="Home">
-            <div className="leftApp">
+      <div id="f1_container">
+      <div id="f1_card" className="shadow">
+        <div className="front face">
+          <div className="NewRegimen">
               <h1 className="regimenHeading">New Regimen</h1>
                 {
                 (regimenId) ? (
@@ -140,16 +139,18 @@ export class NewRegimen extends Component {
                     value = {newStep}
                     onChange= {this.stepChange}
                     />
-                    <button type="submit" className="btn btn-primary d-block" onClick={this.SaveStepAndAddField}>More Steps</button>
-                    <button type="submit" className="btn btn-primary d-block" onClick={this.formSubmit}>Save Regimen</button>
+                    <div className="newButtons">
+                    <button type="submit" className="btn btn-primary d-block moreSteps" onClick={this.SaveStepAndAddField}>More Steps</button>
+                    <button type="submit" className="btn btn-primary d-block saveSteps" onClick={this.formSubmit}>Save Regimen</button>
+                    </div>
                   </div>
                 </form>
                 ) : (
                   <form onSubmit={ e => e.preventDefault()}>
                   <div className="newRegType">
                   <h2>Regimen Type</h2>
-                <select value={newRegimen.type} onChange={this.typeChange} id="type">
-                  <option value="type">Type</option>
+                Select <select value={newRegimen.type} onChange={this.typeChange} id="type" className="dropLabel">
+                  <option value="type">Type...</option>
                   {types.map(type => (
                     <option key={type.id} value={type.id}>{type.name}</option>
                   ))}
@@ -168,17 +169,14 @@ export class NewRegimen extends Component {
                     onChange= {this.titleChange}
                     />
                   </div>
-                            <button type="submit" className="btn btn-primary d-block" onClick={this.createNewRegimen}>Add Steps</button>
-                  <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
+                  <div className="newButtons">
+                  <button type="submit" className="btn btn-primary d-block addSteps" onClick={this.createNewRegimen}>Add Steps</button>
+                  <button className="btn btn-primary d-block cancelSteps" onClick={this.onCancel}>Cancel</button>
+                  </div>
                   </form>
                 )
                   }
       </div>
-      <div class="back face center">
-            <p>This is nice for exposing more information about an image.</p>
-          <p>Any content can go here.</p>
-            </div>
-            </div>
             </div>
             </div>
             </div>

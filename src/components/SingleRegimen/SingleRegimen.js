@@ -54,7 +54,7 @@ class Singleregimen extends React.Component {
     return (
       <div className="Home">
       <div className="leftApp">
-      <h1 className="regimenHeading">{regimen.title}    {
+      <h1 className="regimenTitle">{regimen.title}    {
             creator ? (
               <div>
             <Link to={editLink}><i className="fas fa-pencil-alt"></i></Link>

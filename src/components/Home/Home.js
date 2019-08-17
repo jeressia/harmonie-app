@@ -5,7 +5,7 @@ import 'firebase/auth';
 import regimenData from '../../helpers/data/regimenData';
 import typeData from '../../helpers/data/typeData';
 
-import Users from '../Users/Users';
+import MyUsers from '../Users/Users';
 import RegimenCard from '../RegimenCard/RegimenCard';
 import AddRegimenCard from '../AddRegimenCard/AddRegimenCard';
 
@@ -61,10 +61,10 @@ class Home extends React.Component {
     });
 
     return (
-    <div id="f1_container">
+      <div id="f1_container">
       <div id="f1_card" className="shadow">
         <div className="front face">
-          <div className="Home">
+          <div className="AllRegimens">
             <div className="col-12">
               <div className="headerOptions">
               <h1 className="regimenHeading">My Regimens</h1>
@@ -75,15 +75,15 @@ class Home extends React.Component {
               <div className="d-flex flex-wrap col-12">
                 {makeRegimenCards}
                 <AddRegimenCard />
-              </div>
-            </div>
+                </div>
           </div>
         </div>
-        <div className="back face center">
-       <Users/>
-        </div>
-        </div>
-    </div>
+      </div>
+      <div className="back face center">
+     <MyUsers/>
+      </div>
+      </div>
+  </div>
     );
   }
 }
