@@ -1,8 +1,46 @@
 label {
   float: left;
-  margin-right: 1em; 
+  margin-right: 1em;
 }
 
-  .form-control{
-    float: right;
-  }
+.form-control {
+  float: right;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  clear: both;
+  text-align: center;
+}
+
+.newButtons {
+  clear: both;
+  display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.moreSteps, .saveSteps, .addSteps, .cancelSteps{
+  background-color: #bb9098 !important;
+  color: #5f484d !important;
+  outline: 0px;
+  border-color: transparent !important;
+  margin: 5px;
+}
+
+.dropLabel{
+  background-color: white;
+  text-align: center;
+  width: 80px;
+  padding: 5px;
+}
+
+.regimenSubtitle{
+  text-align: center;
+}
+
+.newRegOptions{
+  margin: 0 auto;
+}

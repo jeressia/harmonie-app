@@ -23,7 +23,7 @@ class RegimenCard extends React.Component {
     const singleLink = `/Regimen/${regimen.id}`;
     const creator = firebase.auth().currentUser.uid === regimen.uid;
     return (
-      <div className="RegimenCard col-3">
+      <div className="RegimenCard">
         <div className="card">
           <div className="card-body" id={regimen.type}>
             <Link className="card-title" to={singleLink}>{regimen.title}</Link>

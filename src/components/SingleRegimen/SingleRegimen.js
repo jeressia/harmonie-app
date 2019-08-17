@@ -52,9 +52,11 @@ class Singleregimen extends React.Component {
     const editLink = `/edit/${this.props.match.params.id}`;
     const creator = firebase.auth().currentUser.uid === regimen.uid;
     return (
-      <div className="Home">
-      <div className="leftApp">
-      <h1 className="regimenHeading">{regimen.title}    {
+      <div id="f1_container">
+      <div id="f1_card" className="shadow">
+        <div className="front face">
+        <div className="SingleRegimen">
+      <h1 className="regimenTitle">{regimen.title}    {
             creator ? (
               <div>
             <Link to={editLink}><i className="fas fa-pencil-alt"></i></Link>
@@ -70,12 +72,15 @@ class Singleregimen extends React.Component {
         {steps.map(step => <tr key={step.id}><span className="stepNum">{step.stepNum}</span>{step.stepText}</tr>)}
         </tbody>
           </table>
-        <button className="btn btn-light" onClick={this.startMe}>Start</button>
-        <button className="btn" onClick={this.onCancel}>Back</button>
+          <div className="singleButton">
+            <button className="btn cancelSteps" onClick={this.onCancel}>Back</button>
+          </div>
           </div>
           </div>
           </div>
       </div>
+      </div>
+          </div>
     );
   }
 }

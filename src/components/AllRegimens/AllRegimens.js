@@ -60,12 +60,12 @@ class AllRegimens extends React.Component {
       <div id="f1_container">
         <div id="f1_card" className="shadow">
           <div className="front face">
-            <div className="Home">
+            <div className="AllRegimens">
               <div className="col-12">
                 <div className="headerOptions">
                 <h1 className="regimenHeading">All Regimens</h1>
                 <div className="icon" onMouseEnter={this.cardFlipEvent}>
-                <i class="fas fa-user" id="fa-user"></i>
+                <i className="fas fa-user" id="fa-user"></i>
                 </div>
                 </div>
                 <div className="d-flex flex-wrap col-12">
