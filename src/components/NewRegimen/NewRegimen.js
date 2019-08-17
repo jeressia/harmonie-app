@@ -148,7 +148,7 @@ export class NewRegimen extends Component {
                 ) : (
                   <form onSubmit={ e => e.preventDefault()}>
                   <div className="newRegType">
-                  <h2>Regimen Type</h2>
+                  <h2 className="regimenSubtitle">Regimen Type</h2>
                 Select <select value={newRegimen.type} onChange={this.typeChange} id="type" className="dropLabel">
                   <option value="type">Type...</option>
                   {types.map(type => (

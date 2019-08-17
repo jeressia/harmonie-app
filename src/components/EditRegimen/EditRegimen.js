@@ -71,40 +71,40 @@ export class EditRegimen extends Component {
   render() {
     const { newRegimen, types } = this.state;
     return (
-      <div id="f2_container">
-      <div id="f2_card" className="shadow">
-        <div className="front face">
-      <div className="Home">
-      <div className="leftApp">
-      <p className="regimenHeading">Edit {newRegimen.title}</p>
-      <h1 className="regimenTitle">{newRegimen.title}</h1>
-        <form onSubmit={ e => e.preventDefault()}>
-        <select value={newRegimen.type} onChange={this.typeChange} id="type">
-          <option value="type">Type</option>
-          {types.map(type => (
-            <option key={type.id} value={type.id}>{type.name}</option>
-          ))}
-        </select>
-        <input className="m-2" type="radio" name="isPrivate" value={false} onChange={this.privacyChange} checked={this.state.newRegimen.isPrivate === 'false'}/> Public
-<input className="m-2" type="radio" name="isPrivate" value={true} onChange={this.privacyChange} checked={this.state.newRegimen.isPrivate === 'true'}/> Private
-          <div className="form-group">
-            <label htmlFor="title">Title</label>
-            <input
-            type="text"
-            className="form-control"
-            id="title"
-            placeholder="John's Hair Regimen"
-            value = {newRegimen.title}
-            onChange= {this.titleChange}
-            />
-          </div>
-          <button type="submit" className="btn btn-primary d-block" onClick={this.formSubmit}>Update Regimen</button>
-          <button className="btn btn-primary d-block" onClick={this.onCancel}>Cancel</button>
-          </form>
-      </div>
-      </div>
-      </div>
+      <div id="f1_container">
+        <div id="f1_card" className="shadow">
+          <div className="front face">
+            <div className="EditRegimen">
+            <p className="regimenHeading">Edit {newRegimen.title}</p>
+            <h1 className="regimenTitle">{newRegimen.title}</h1>
+              <form onSubmit={ e => e.preventDefault()}>
+                Change Type? <select value={newRegimen.type} onChange={this.typeChange} id="type">
+                <option value="type">Type</option>
+                {types.map(type => (
+                  <option key={type.id} value={type.id}>{type.name}</option>
+                ))}
+                </select>
+                <input className="m-2" type="radio" name="isPrivate" value={false} onChange={this.privacyChange} checked={this.state.newRegimen.isPrivate === 'false'}/> Public
+                <input className="m-2" type="radio" name="isPrivate" value={true} onChange={this.privacyChange} checked={this.state.newRegimen.isPrivate === 'true'}/> Private
+                <div className="form-group">
+                  <label htmlFor="title">Title</label>
+                  <input
+                  type="text"
+                  className="form-control"
+                  id="title"
+                  placeholder="John's Hair Regimen"
+                  value = {newRegimen.title}
+                  onChange= {this.titleChange}
+                  />
+                </div>
+                <div className="newButtons">
+                  <button type="submit" className="btn btn-primary d-block addSteps" onClick={this.formSubmit}>Update Regimen</button>
+                  <button className="btn btn-primary d-block cancelSteps" onClick={this.onCancel}>Cancel</button>
+                </div>
+              </form>
             </div>
+        </div>
+      </div>
             </div>
     );
   }

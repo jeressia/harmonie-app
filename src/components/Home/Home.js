@@ -12,10 +12,13 @@ import AddRegimenCard from '../AddRegimenCard/AddRegimenCard';
 import './Home.scss';
 
 class Home extends React.Component {
+  _isMounted = false;
+
   state={
     regimens: [],
     types: [],
     currentState: true,
+    isLoading: true,
   }
 
   getRegimens = () => {
@@ -45,9 +48,6 @@ class Home extends React.Component {
     document.getElementById('f1_card').classList.add('card-flip');
   }
 
-  cardFlipBackEvent = () => {
-    document.getElementById('f1_card').classList.remove('card-flip');
-  }
 
   render() {
     const makeRegimenCards = this.state.regimens.map((regimen) => {

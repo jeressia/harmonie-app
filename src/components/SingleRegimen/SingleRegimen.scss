@@ -18,5 +18,10 @@
 .regimenTitle{
   clear: both;
   text-transform: uppercase;
+  text-align: center;
+}
 
+.singleButton{
+  display: flex;
+  justify-content: center;
 }
